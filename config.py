@@ -1,7 +1,21 @@
-# Lennard Jones Parameters
-A = 0.001
-B = 0.001
+# Render.py Configuration
 
-# Simulation Bounds
-C = 10
-n = 2
+# Window Boundaries
+# render.py configuration
+
+# Window limits
+xlim=[-100,100]
+ylim=[-100,100]
+# Simulation limits
+xsimlim=(-75,75)
+ysimlim=(-75,75)
+
+# simulation configuration
+# Number of particles to simulate
+n = 100
+
+# Depth of potential well
+e = 10
+
+# Minimum potential distance
+sigma = 10

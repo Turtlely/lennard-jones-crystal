@@ -1,11 +1,17 @@
-# Function to calculate the lennard jones potential of two particles
+# Various potentials to expose particles to
 import numpy as np
 import config
 
-def calculatePotential(a,b):
-    r = np.linalg.norm(a.loc - b.loc)
-    return (config.A/np.power(r,12))-(config.B/np.power(r,6))
+# Basic LJ potential
+def V(a,b):
+    r = np.linalg.norm(np.array(a.loc)-np.array(b.loc))
+    return 4*config.e*(np.power(config.sigma/r,12)-np.power(config.sigma/r,6))
 
-def calculateForce(a,b):
-    r = np.linalg.norm(a - b)
-    return -12 * config.A * np.power(r,-13) + 6 * config.B * np.power(r,-7), r
+def V(r):
+    #r = np.linalg.norm(np.array(a.loc)-np.array(b.loc))
+    return 4*config.e*(np.power(config.sigma/r,12)-np.power(config.sigma/r,6))
+
+
+def F(a,b):
+    r = np.linalg.norm(np.array(a.loc)-np.array(b.loc))
+    return -24*config.e*np.power(config.sigma,6)*((2*np.power(config.sigma,6)/np.power(r,13))-np.power(r,-7))
