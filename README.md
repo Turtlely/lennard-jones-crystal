@@ -8,3 +8,5 @@ Simulation parameters can be adjusted for different scenarios.
 - Initial particle configuration (A function is included to generate grids of particles automatically)
 - window size
 
+## Projectile launched at grid of particles
+![](https://github.com/Turtlely/lennard-jones-crystal/blob/bb9b22c287783ebdafc1b22377fc934846a8ce90/2023-06-26%2013-03-10.gif)
